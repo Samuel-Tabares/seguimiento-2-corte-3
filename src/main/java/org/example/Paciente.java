@@ -2,17 +2,17 @@ package org.example;
 
 import java.util.Random;
 
-public class Paciente {
-    private String nombre;
+public class Paciente<T> {
+    private T nombre;
     private int tiempoAtencion; // en milisegundos
 
-    public Paciente(String nombre) {
+    public Paciente(T nombre) {
         this.nombre = nombre;
         Random rand = new Random();
         this.tiempoAtencion = rand.nextInt(3000) + 2000; // Tiempo de atención entre 2 y 5 segundos
     }
 
-    public String getNombre() {
+    public T getNombre() {
         return nombre;
     }
 
